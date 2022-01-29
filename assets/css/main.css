@@ -1,5 +1,42 @@
+html {
+  /* color vars*/
+  --main-text-color: #055b5a;
+
+  /* fsz vars*/
+  --default-text-size: 14px;
+  --h2-text-size: 18px;
+  --lead-text-size: 16px;
+
+  /* structure vars*/
+  --pc-contents-size: 750px;
+}
+
 body {
-  font-family: 'Shippori Mincho', serif;
+  font-family: "Shippori Mincho", serif;
+  color: var(--main-text-color);
+  line-height: 1.6;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.document-wrapper {
+  background: linear-gradient(20deg, #49ada8, #eaded4);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+}
+
+main {
+  padding: 50px;
 }
 
 img {
@@ -42,7 +79,7 @@ header a figure {
 }
 
 section {
-  width: 700px;
+  width: var(--pc-contents-size);
   padding-top: 100px;
   padding-bottom: 100px;
   margin-left: auto;
@@ -50,5 +87,35 @@ section {
 }
 
 section h2 {
-  font-size: 20px;
+  font-size: var(--h2-text-size);
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+section .text p {
+  font-size: var(--default-text-size);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+section .lead {
+  margin-bottom: 15px;
+}
+
+section .lead p {
+  font-size: var(--lead-text-size);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+section .lead p:nth-of-type(2) {
+  text-indent: 3em;
+}
+
+section .text ul {
+  font-size: var(--default-text-size);
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 10px;
 }
