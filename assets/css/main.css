@@ -51,12 +51,9 @@ header {
 }
 
 header a {
-  display: flex;
-  align-items: center;
-}
-
-header a figure {
-  width: 130px;
+  display: block;
+  width: 280px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
 }
 
 .fv {
