@@ -19,10 +19,19 @@
   </head>
   <body>
     <div class="document-wrapper">
-      <header>
+      <header class="global-header">
         <a href="#">
           <figure><img src="./assets/images/logo.png" alt="" /></figure>
         </a>
+        <nav>
+          <a href="#story">あらすじ</a>
+          <a href="#cast">出演</a>
+          <a href="#schedule">公演日程</a>
+          <a href="#ticket">チケット</a>
+          <a href="#place">会場</a>
+          <a href="#staff">スタッフ</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
       </header>
       <main>
         <div class="fv">
@@ -30,11 +39,13 @@
             <img src="./assets/images/flyer.jpg" alt="" />
           </figure>
         </div>
-        <section class="story">
+        <section class="story" id="story">
           <h2>あらすじ</h2>
           <div class="text">
             <div class="lead">
-              <p>迷える羊の運命は 出来合い あるいは 溺愛 か</p>
+              <p>
+                迷える羊の運命は<span>出来合い</span>あるいは<span>溺愛</span>か
+              </p>
               <p>－古代エジプトの神秘が煌めく惣菜ラブロマンス</p>
             </div>
             <p>
@@ -53,10 +64,14 @@
               そこは古代エジプトの神秘が煌めく世界。
               羊飼いとなった羊太は、夢の世界で”完全なる美”と遭遇してしまう。
             </p>
-            <p>作・演出 八亀ざお（劇団玄娘商カチョエペペ 代表）</p>
+            <p class="name">
+              作・演出
+              <br />
+              八亀ざお（劇団玄娘商カチョエペペ 代表）
+            </p>
           </div>
         </section>
-        <section class="cast">
+        <section class="cast" id="cast">
           <h2>出演</h2>
           <div class="text">
             <p>XXX</p>
@@ -64,14 +79,14 @@
             <p>杉田のぞみ （合同会社A-ZO Jaya）</p>
           </div>
         </section>
-        <section class="schedule">
+        <section class="schedule" id="schedule">
           <h2>公演日程</h2>
           <div class="text">
-            <p>2022年4月22日（金）- 4月24日（日）</p>
+            <p>2022年4月22日(金) - 4月24日(日)</p>
             <ul>
-              <li>22日（金）14:00/18:30</li>
-              <li>23日（土）14:00/18:30</li>
-              <li>24日（日）12:00/16:30</li>
+              <li>22日(金) 14:00 / 18:30</li>
+              <li>23日(土) 14:00 / 18:30</li>
+              <li>24日(日) 12:00 / 16:30</li>
             </ul>
             <p>
               受付開始・開場は開演の30分前。
@@ -82,55 +97,101 @@
             </p>
           </div>
         </section>
-        <section class="ticket">
+        <section class="ticket" id="ticket">
           <h2>チケット</h2>
           <div class="text">
             <p>
-              発売日 ３月２２日（火）10時 料金 前売り：3,000 円 当日：3,500 円
+              発売日
               <br />
-              （税込・全席自由） 取扱い ◎カルテットオンライン【当日精算】
+              3月22日(火)10時
             </p>
+            <p>
+              料金
+              <br />
+              前売り：3,000 円
+              <br />
+              当日　：3,500 円
+              <br />
+              (税込・全席自由)
+            </p>
+            <p>取扱い ◎カルテットオンライン【当日精算】</p>
           </div>
         </section>
-        <section class="place">
+        <section class="place" id="place">
           <h2>会場</h2>
-          <figure><img src="./assets/images/map.png" alt="" /></figure>
+          <div class="wrap">
+            <div class="text">
+              <p>
+                3331 Arts Chiyoda <br />
+                〒101-0021 <br />
+                東京都千代田区外神田6丁目11-14
+              </p>
+            </div>
+            <div class="map">
+              <figure><img src="./assets/images/map.png" alt="" /></figure>
+              <a href="https://goo.gl/maps/hXTnabgiSgzWPmfKA" target="_blank">
+                Google Mapで開く
+              </a>
+            </div>
+          </div>
         </section>
-        <section class="staff">
+        <section class="staff" id="staff">
           <h2>スタッフ</h2>
           <div class="text">
-            <p>
-              プロデュース 牧屋漿（劇団玄娘商主宰）
-              <br />
-              舞台美術 関由樹
-              <br />
-              照明プランナー 永谷和也
-              <br />
-              音響 山本亜美
-              <br />
-              音楽 清水光輝
-              <br />
-              衣装 青山明日香
-              <br />
-              宣伝美術 清水穂高
-              <br />
-              企画・製作 劇団玄娘商
-              <br />
-              協力 合同会社A-ZO Jaya
-            </p>
+            <dl>
+              <dt>プロデュース</dt>
+              <dd>牧屋漿（劇団玄娘商主宰）</dd>
+            </dl>
+            <dl>
+              <dt>舞台美術</dt>
+              <dd>関由樹</dd>
+            </dl>
+            <dl>
+              <dt>照明プランナー</dt>
+              <dd>永谷和也</dd>
+            </dl>
+            <dl>
+              <dt>音響</dt>
+              <dd>山本亜美</dd>
+            </dl>
+            <dl>
+              <dt>音楽</dt>
+              <dd>清水光輝</dd>
+            </dl>
+            <dl>
+              <dt>衣装</dt>
+              <dd>青山明日香</dd>
+            </dl>
+            <dl>
+              <dt>宣伝美術</dt>
+              <dd>清水穂高</dd>
+            </dl>
+            <dl>
+              <dt>企画・製作</dt>
+              <dd>劇団玄娘商</dd>
+            </dl>
+            <dl>
+              <dt>協力</dt>
+              <dd>合同会社A-ZO Jaya</dd>
+            </dl>
           </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
           <h2>お問い合わせ</h2>
           <div class="text">
             <p>
               劇団玄娘商カチョエペペ
               <br />
-              geki.kurokosho@gmail.com
+              <a href="mailto:geki.kurokosho@gmail.com"
+                >geki.kurokosho@gmail.com</a
+              >
               <br />
-              Twitter：geki_kurokosho
+              Twitter :
+              <a href="https://twitter.com/geki_kurokosho" target="_blank"
+                >@geki_kurokosho</a
+              >
               <br />
-              電話：080-3106-2326（代表八亀）
+              080-3106-2326（代表八亀）
             </p>
           </div>
         </section>

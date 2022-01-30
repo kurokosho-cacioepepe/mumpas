@@ -5,16 +5,33 @@ html {
   /* fsz vars*/
   --default-text-size: 14px;
   --h2-text-size: 18px;
-  --lead-text-size: 16px;
 
   /* structure vars*/
   --pc-contents-size: 750px;
 }
 
+/* structure */
 body {
   font-family: "Shippori Mincho", serif;
   color: var(--main-text-color);
   line-height: 1.6;
+  font-size: var(--default-text-size);
+}
+
+a {
+  color: var(--main-text-color);
+  font-size: var(--default-text-size);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @keyframes gradient {
@@ -36,46 +53,10 @@ body {
 }
 
 main {
-  padding: 50px;
+  padding: 0 50px;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-header {
-  position: fixed;
-  padding: 15px;
-}
-
-header a {
-  display: block;
-  width: 280px;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
-}
-
-.fv {
-  width: 100%;
-  height: 100vh;
-}
-
-.fv figure {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fv figure img {
-  height: 90vh;
-  object-fit: contain;
-  object-position: center;
-}
-
-section {
+main > section {
   width: var(--pc-contents-size);
   padding-top: 100px;
   padding-bottom: 100px;
@@ -83,36 +64,134 @@ section {
   margin-right: auto;
 }
 
-section h2 {
+main > section h2 {
   font-size: var(--h2-text-size);
   margin-bottom: 30px;
   font-weight: bold;
 }
 
-section .text p {
-  font-size: var(--default-text-size);
+main > section .text p {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+/* structure */
 
-section .lead {
-  margin-bottom: 15px;
+/* header */
+header.global-header {
+  position: fixed;
+  padding: 15px;
 }
 
-section .lead p {
-  font-size: var(--lead-text-size);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-section .lead p:nth-of-type(2) {
-  text-indent: 3em;
+header.global-header a {
+  display: block;
+  width: 280px;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
 }
 
-section .text ul {
-  font-size: var(--default-text-size);
+header.global-header nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 10px;
+  padding-left: 20px;
 }
 
+header.global-header nav a {
+  text-decoration: none;
+  font-size: 12px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  
+}
+
+header.global-header nav a:hover {
+  color: #49ada8;
+}
+
+/* header */
+
+/* footer */
 footer {
   text-align: center;
   font-size: 12px;
   padding-bottom: 10px;
 }
+/* footer */
+
+/* fv */
+div.fv {
+  width: 100%;
+  height: 100vh;
+}
+
+div.fv figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.fv figure img {
+  height: 90vh;
+  object-fit: contain;
+  object-position: center;
+}
+/* fv */
+
+/* story */
+section.story .lead {
+  margin-bottom: 15px;
+}
+
+section.story .lead p {
+  font-size: 110%;
+}
+
+section.story .lead p span {
+  font-size: 120%;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+section.story .lead p:nth-of-type(2) {
+  text-indent: 3em;
+}
+
+section.story p.name {
+  margin-top: 30px;
+  text-align: center;
+}
+/* story */
+
+/* schedule */
+section.schedule .text ul {
+  font-size: var(--default-text-size);
+}
+/* schedule */
+
+/* place */
+section.place .wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.place .wrap .text {
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+/* place */
+
+/* staff */
+section.staff dl {
+  display: flex;
+}
+
+section.staff dl dt {
+  /* text-align: right; */
+  min-width: 110px;
+  margin-right: 10px;
+}
+
+/* staff */
