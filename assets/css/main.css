@@ -148,9 +148,6 @@ div.fv figure img {
 /* story */
 section.story .lead {
   margin-bottom: 15px;
-}
-
-section.story .lead p {
   font-size: 110%;
 }
 
@@ -226,7 +223,8 @@ section.staff dl dt {
     height: 1px;
     background-color: var(--main-text-color);
     position: absolute;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
+    will-change: transform;
   }
 
   header.global-header button:before {
@@ -281,6 +279,14 @@ section.staff dl dt {
 
   header.global-header nav a {
     color: #eaded4;
+  }
+
+  section.story .lead {
+    font-size: 102%;
+  }
+
+  section.story .lead p:nth-of-type(2) {
+    text-indent: 0.5em;
   }
 
   section.place .wrap {
