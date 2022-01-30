@@ -37,20 +37,20 @@ img {
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 100%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 0;
   }
 }
 
 .document-wrapper {
-  background: linear-gradient(20deg, #49ada8, #eaded4);
+  background: linear-gradient(10deg, #eaded4, #49ada8);
   background-size: 200% 200%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 30s ease infinite;
 }
 
 main {
@@ -225,6 +225,7 @@ section.staff dl dt {
     position: absolute;
     transition-duration: 0.2s;
     will-change: transform;
+    transition-property: transform, background-color;
   }
 
   header.global-header button:before {
@@ -237,10 +238,12 @@ section.staff dl dt {
   header.global-header button.open:before {
     top: 50%;
     transform: rotate(30deg);
+    background-color: #eaded4;
   }
   header.global-header button.open:after {
     bottom: 50%;
     transform: rotate(-30deg);
+    background-color: #eaded4;
   }
 
   header.global-header a.logo {
