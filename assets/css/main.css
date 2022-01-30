@@ -7,7 +7,8 @@ html {
   --h2-text-size: 18px;
 
   /* structure vars*/
-  --pc-contents-size: 750px;
+  --pc-contents-size: 580px;
+  --sp-contents-size: 100%;
 }
 
 /* structure */
@@ -53,7 +54,7 @@ img {
 }
 
 main {
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 main > section {
@@ -82,7 +83,7 @@ header.global-header {
   padding: 15px;
 }
 
-header.global-header a {
+header.global-header a.logo {
   display: block;
   width: 280px;
   filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.1));
@@ -92,8 +93,14 @@ header.global-header nav {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  gap: 10px;
+  gap: 15px;
   padding-left: 20px;
+}
+
+header.global-header nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 header.global-header nav a {
@@ -101,7 +108,6 @@ header.global-header nav a {
   font-size: 12px;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
-  
 }
 
 header.global-header nav a:hover {
@@ -189,9 +195,99 @@ section.staff dl {
 }
 
 section.staff dl dt {
-  /* text-align: right; */
   min-width: 110px;
   margin-right: 10px;
 }
-
 /* staff */
+
+@media (max-width: 800px) {
+  main > section {
+    width: var(--sp-contents-size);
+  }
+
+  header.global-header {
+    width: 100%;
+  }
+
+  header.global-header button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  header.global-header button:before,
+  header.global-header button:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-text-color);
+    position: absolute;
+    transition-duration: 0.4s;
+  }
+
+  header.global-header button:before {
+    top: 10px;
+  }
+  header.global-header button:after {
+    bottom: 10px;
+  }
+
+  header.global-header button.open:before {
+    top: 50%;
+    transform: rotate(30deg);
+  }
+  header.global-header button.open:after {
+    bottom: 50%;
+    transform: rotate(-30deg);
+  }
+
+  header.global-header a.logo {
+    width: 200px;
+  }
+
+  header.global-header nav {
+    display: none;
+    animation-name: sp-nav;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes sp-nav {
+    0% {
+      opacity: 0;
+      transform: translate(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+  header.global-header nav.open {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(29, 68, 66, 0.95);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 50px;
+  }
+
+  header.global-header nav a {
+    color: #eaded4;
+  }
+
+  section.place .wrap {
+    display: block;
+  }
+
+  section.place .wrap .text {
+    margin-right: 0;
+  }
+}
