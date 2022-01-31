@@ -99,6 +99,7 @@ main > section .text p {
 header.global-header {
   position: fixed;
   padding: 15px;
+  z-index: 9999;
 }
 
 header.global-header a.logo {
