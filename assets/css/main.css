@@ -387,6 +387,10 @@ section.staff dl dt {
     padding-bottom: 150px;
   }
 
+  section.story .lead p {
+    white-space: nowrap;
+  }
+
   section.story .lead p:nth-of-type(1) {
     text-indent: -0.5em;
   }
