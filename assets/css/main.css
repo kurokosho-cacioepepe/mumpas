@@ -248,7 +248,7 @@ section.place:after {
   height: 300px;
   background-image: url("../images/bg_lady.png");
   left: -150px;
-  bottom: 0px;
+  top: 200px;
 }
 
 section.place .wrap {
@@ -260,6 +260,20 @@ section.place .wrap .text {
   flex-shrink: 0;
   margin-right: 30px;
 }
+
+section.place .covid {
+  background-color: #eaeaea;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+section.place h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 /* place */
 
 /* staff */
@@ -421,6 +435,11 @@ section.staff dl dt {
   }
   /* cast */
 
+  section.place h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
   section.story:after {
     width: 140px;
     height: 140px;
@@ -447,6 +466,7 @@ section.staff dl dt {
     height: 140px;
     background-image: url("../images/bg_lady.png");
     left: auto;
+    top: auto;
     right: 20px;
     bottom: -70px;
   }
