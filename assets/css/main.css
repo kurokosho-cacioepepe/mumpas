@@ -200,6 +200,26 @@ section.story p.name {
 }
 /* story */
 
+/* cast */
+section.cast .text {
+  display: flex;
+  justify-content: center;
+}
+
+section.cast .text p {
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+section.cast .text p span {
+  display: block;
+  font-size: 11px;
+}
+/* cast */
+
 /* schedule */
 section.schedule:after {
   width: 100px;
@@ -379,6 +399,21 @@ section.staff dl dt {
     left: 0px;
     bottom: -100px;
   }
+
+  /* cast */
+
+  section.cast .text p {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 18px;
+  }
+
+  section.cast .text p span {
+    display: block;
+    font-size: 10px;
+  }
+  /* cast */
+
   section.schedule:after {
     width: 70px;
     height: 200px;
