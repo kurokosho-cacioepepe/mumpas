@@ -173,10 +173,10 @@ section.story:after {
   bottom: -30px;
 }
 section.story .lead {
-  padding-bottom: 30px;
-  padding-bottom: 20px;
-  font-size: 140%;
+  padding-bottom: 150px;
+  font-size: 150%;
   text-align: center;
+  line-height: 2;
 }
 
 section.story .lead p span {
@@ -281,7 +281,16 @@ section.staff dl dt {
 }
 /* staff */
 
+@media (min-width: 801px) {
+  br.sm-only {
+    display: none;
+  }
+}
+
 @media (max-width: 800px) {
+  br.lg-only {
+    display: none;
+  }
   main > section {
     width: var(--sp-contents-size);
   }
@@ -374,7 +383,8 @@ section.staff dl dt {
   }
 
   section.story .lead {
-    font-size: 102%;
+    font-size: 105%;
+    padding-bottom: 150px;
   }
 
   section.story .lead p:nth-of-type(1) {
@@ -393,13 +403,6 @@ section.staff dl dt {
     margin-right: 0;
   }
 
-  section.story:after {
-    width: 200px;
-    height: 200px;
-    left: 0px;
-    bottom: -100px;
-  }
-
   /* cast */
 
   section.cast .text p {
@@ -414,31 +417,38 @@ section.staff dl dt {
   }
   /* cast */
 
+  section.story:after {
+    width: 140px;
+    height: 140px;
+    left: 0px;
+    bottom: -70px;
+  }
+
   section.schedule:after {
-    width: 70px;
-    height: 200px;
+    width: 50px;
+    height: 160px;
     right: 0px;
     top: 30px;
     transform: rotate(20deg);
   }
   section.ticket:after {
-    width: 150px;
-    height: 250px;
+    width: 120px;
+    height: 200px;
     background-image: url("../images/bg_gentle.png");
     right: -10px;
-    bottom: 0px;
+    bottom: -70px;
   }
   section.place:after {
-    width: 100px;
-    height: 200px;
+    width: 50px;
+    height: 140px;
     background-image: url("../images/bg_lady.png");
     left: auto;
-    right: 0;
-    bottom: -100px;
+    right: 20px;
+    bottom: -70px;
   }
   section.staff:after {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background-image: url("../images/bg_balance.png");
     right: auto;
     left: 0px;
